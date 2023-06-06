@@ -1,0 +1,53 @@
+* Lensr's first very simple web3 dApp
+
+Just a little dApp where digital goods might be exchanged via the Ethereum blockchain. Fetches active account from current web3 provider, and allows to create products of any non-zero price with any name, and purchasing of those products from any other account as many times as wanted. This is ideal for digital goods, for example.
+
+Originated from the [[https://trufflesuite.com/guides/pet-shop/][Truffle "Pet Shop" Tutorial]] (forked starter kit from an article about that tutorial at [[https://www.dappuniversity.com/articles/how-to-build-a-blockchain-app][dappuniversity.com]]).
+
+[[file:screenshot1.png][Screenshot]]
+
+** Building
+
+Dependencies:
+- [[https://nodejs.org/en/download][Node.js]] (npm)
+
+With a working directory of the root of this repository, run the following commands.
+
+This will install all of the required dependencies not listed above.
+#+begin_src sh
+  npm install
+#+end_src
+
+This will compile the smart contracts.
+#+begin_src sh
+  npx truffle compile
+#+end_src
+
+This will migrate the smart contracts, so that they are ready to be deployed to a blockchain.
+#+begin_src sh
+  npx truffle migrate
+#+end_src
+NOTE: Further migrations should probably be done with ~--reset~ flag.
+
+*** Running it Locally
+
+Dependencies:
+- [[https://trufflesuite.com/ganache/][Ganache]] (or some other local blockchain)
+- Ethereum-enabled browser ([[https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en][MetaMask extension]], for example)
+
+Follow the steps to setup a default Ganache workspace (press the quickstart button when you launch the application). After that, add it as a custom network to MetaMask using the RPC URL from Ganache. Don't forget to import at least two accounts from Ganache (by copying private key) into MetaMask; there needs to be at least one seller and one buyer.
+
+With the imported MetaMask accounts connected to the custom local blockchain hosted within Ganache, all that's left is to start the website so we can actually interact with it.
+#+begin_src sh
+  npm run start
+#+end_src
+
+That should open up your browser to your locally hosted version of the dApp!
+
+
+** Running Tests
+
+#+begin_src sh
+  npx truffle test
+#+end_src
+

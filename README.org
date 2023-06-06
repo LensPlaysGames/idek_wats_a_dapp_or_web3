@@ -4,7 +4,7 @@ Just a little dApp where digital goods might be exchanged via the Ethereum block
 
 Originated from the [[https://trufflesuite.com/guides/pet-shop/][Truffle "Pet Shop" Tutorial]] (forked starter kit from an article about that tutorial at [[https://www.dappuniversity.com/articles/how-to-build-a-blockchain-app][dappuniversity.com]]).
 
-[[file:screenshot1.png][Screenshot]]
+[[./screenshot1.png]]
 
 ** Building
 
